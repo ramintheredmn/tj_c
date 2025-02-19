@@ -7,6 +7,8 @@ void stack_push(stack_t* stack, void* obj) {
         stack->capacity *= 2;
         stack->data = realloc(stack->data, sizeof(void*) * stack->capacity);
         if (stack->data == NULL) {return;};
+        stack->data[stack->count] = obj;
+        stack->count++;
 
     }
 }
