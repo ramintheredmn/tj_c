@@ -240,7 +240,7 @@ int main(void) {
 }
 ``` 
 
-## [[Stack]] #DataStructure 
+## Stack data structure
 
 Generics in c is just `void *`
 
@@ -253,3 +253,5 @@ typedef struct stack {
 	void** data;
 } stack_t;
 ```
+
+![[Drawing 2025-02-19 17.41.51.excalidraw]]
