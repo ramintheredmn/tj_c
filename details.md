@@ -74,7 +74,7 @@ when we want sizeof an array c computes the sizeof whole array, not a 64bit (8by
 
 ### strings
 
-`strcpy'
+`strcpy`
 `strcat`
 `strlen`
 `strcmp`
