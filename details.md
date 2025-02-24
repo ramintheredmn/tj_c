@@ -255,3 +255,24 @@ typedef struct stack {
 ```
 
 ![[Drawing 2025-02-19 17.41.51.excalidraw]]
+
+#### Stack push
+Just check that stack capacity is = to stack count then `realloc` the data with the 2ice memory and put the `obj` at the `stack->count`s place of the data,
+
+```c
+void stack_push(stack_t* stack, void* obj) {
+    if (stack->capacity == stack->count) {
+        stack->capacity *= 2;
+        stack->data = realloc(stack->data, sizeof(void*) * stack->capacity);
+        if (stack->data == NULL) {return;};
+        stack->data[stack->count] = obj;
+        stack->count++;
+
+    }
+}
+
+```
+
+#### Stack pop
+we just set the count to one lower we dont need the worry about the data itself just lower the index
+
